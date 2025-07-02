@@ -56,7 +56,7 @@ class CustomBottomNavBar extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         clipBehavior: Clip.none,
         children: [
-          // Bar background (pill shape with large corner radius)
+         
           Positioned(
             bottom: 0,
             left: 0,
@@ -71,9 +71,9 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
             ),
           ),
-          // Floating FAB
+          
           Positioned(
-            top: -18, // Move up a bit more for Figma match
+            top: -18, 
             child: Container(
               width: fabSize,
               height: fabSize,
@@ -98,7 +98,7 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
             ),
           ),
-          // Bar items
+        
           Positioned(
             bottom: 0,
             left: 0,
@@ -163,7 +163,6 @@ class CustomBottomNavBar extends StatelessWidget {
         alignment: Alignment.topCenter,
         clipBehavior: Clip.none,
         children: [
-          // Bar background with diamond notch
           Positioned(
             top: diamondSize * 0.7,
             left: 0,
@@ -178,11 +177,10 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
             ),
           ),
-          // Floating diamond FAB (scan icon)
           Positioned(
             top: 0,
             child: Transform.rotate(
-              angle: 0.785398, // 45 degrees
+              angle: 0.785398, 
               child: GestureDetector(
                 onTap: () => onTap(notchIndex),
                 child: Container(
@@ -201,9 +199,9 @@ class CustomBottomNavBar extends StatelessWidget {
                   ),
                   child: Center(
                     child: Transform.rotate(
-                      angle: -0.785398, // Rotate icon upright
+                      angle: -0.785398, 
                       child: Icon(
-                        Icons.qr_code_scanner, // Always scan icon
+                        Icons.qr_code_scanner, 
                         color: Colors.white,
                         size: 28,
                       ),
@@ -213,7 +211,6 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
             ),
           ),
-          // Bar items
           Positioned(
             top: diamondSize * 0.7,
             left: 0,
